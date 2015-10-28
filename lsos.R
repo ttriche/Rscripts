@@ -7,11 +7,11 @@
 #' 
 #' @export
 #' 
-lsos <- function(..., n=10) {
-  .ls.objects(..., order.by="Size", decr=TRUE, head=TRUE, n=n)
+lsos <- function(n=10, ...) {
+  .ls.objects(order.by="Size", decreasing=TRUE, head=TRUE, n=n)
 }
 
-.ls.objects <- function(pos=1, pattern="", order.by, decr=F, head=F, n=5) { 
+.ls.objects <- function(pos=1, pattern="", order.by, decreasing=F, head=F, n=5){
   napply <- function(names, fn) sapply(names, function(x) fn(get(x, pos=pos)))
   names <- ls(pos = pos, pattern = pattern)
   obj.class <- napply(names, function(x) as.character(class(x))[1])
@@ -23,7 +23,8 @@ lsos <- function(..., n=10) {
   obj.dim[vec, 1] <- napply(names, length)[vec]
   out <- data.frame(obj.type, obj.size, obj.dim)
   names(out) <- c("Type", "Size", "Rows", "Columns")
-  if (!missing(order.by)) out <- out[order(out[[order.by]], decr=decr), ]
-  if (head) out <- head(out, n)
+  if (!missing(order.by)) 
+    out <- out[order(out[[order.by]], decreasing=decreasing), ]
+  if (head == TRUE) out <- head(out, n)
   return(out)
 }
