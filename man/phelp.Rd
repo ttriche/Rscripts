@@ -15,3 +15,9 @@ an interactive list of documented topics for that package
 \description{
 get the list of named documentation files for a package from its namespace
 }
+\examples{
+help(package="Rscripts") 
+phelp(Rscripts) 
+phelp(MASS) 
+
+}

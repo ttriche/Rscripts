@@ -1,10 +1,11 @@
 Package: Rscripts
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Title: Accumulated code that Tim takes for granted and other people request
+Version: 0.9.99
+Authors: Tim Triche <tim.triche@gmail.com>, Asif Zubair, probably others
+Description: Over the years I have, like most programmers, ended up with some convenience functions that I tend to rely upon and trainees/collaborators ask for. These include things like `phelp`, `dtach`, and other linguistic abominations, as well as a version of print.data.frame() that uses IRanges and doesn't suck. Note that in actual practice, I just source all the files in Rscripts/R/, because I am a caveman typing into a terminal with green letters.
 Depends: R (>= 3.4.3)
-License: What license is it under?
+Suggests: IRanges
+License: GPL2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.1

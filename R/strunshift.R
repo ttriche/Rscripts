@@ -11,5 +11,5 @@
 #' @export
 #'
 strunshift <- function(w, x, y=" ", z=0) {
-  paste(append(str2vec(w, y), x, z, collapse=y))
+  paste(append(str2vec(w, y), x, z), collapse=y)
 }

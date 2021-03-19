@@ -4,7 +4,10 @@
 #' 
 #' @return  an interactive list of documented topics for that package
 #'
-#' @example phelp(MASS) 
+#' @examples
+#' help(package="Rscripts") 
+#' phelp(Rscripts) 
+#' phelp(MASS) 
 #' 
 #' @export
 #' 
