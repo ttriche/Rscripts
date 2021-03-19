@@ -1,10 +1,11 @@
 Package: Rscripts
 Title: Accumulated code that Tim takes for granted and other people request
-Version: 0.9.99
+Version: 0.9.999
 Authors: Tim Triche <tim.triche@gmail.com>, Asif Zubair, probably others
-Description: Over the years I have, like most programmers, ended up with some convenience functions that I tend to rely upon and trainees/collaborators ask for. These include things like `phelp`, `dtach`, and other linguistic abominations, as well as a version of print.data.frame() that uses IRanges and doesn't suck. Note that in actual practice, I just source all the files in Rscripts/R/, because I am a caveman typing into a terminal with green letters.
-Depends: R (>= 3.4.3)
-Suggests: IRanges
+Description: Over the years I have, like most programmers, ended up with some convenience functions that I tend to rely upon and trainees/collaborators ask for. These include things like `phelp`, `dtach`, and other linguistic abominations, as well as a version of print.data.frame() that uses IRanges and doesn't suck. Note that in actual practice, I just source all the files in Rscripts/R/, because I am a caveman typing into a terminal with green letters. Also note that this is accomplished via .Rprofile, and my .Rprofile is linked into system.file("extdata", ".Rprofile", package="Rscripts") so that I don't forget where I put it. If this sounds a lot like the ravings of a crazy man, that's because it is.
+Depends: R (>= 3.4.3), utils
+Imports: IRanges
+Suggests: S4Vectors, BiocManager
 License: GPL2
 Encoding: UTF-8
 LazyData: true
