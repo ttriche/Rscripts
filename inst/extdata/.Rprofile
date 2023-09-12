@@ -1,6 +1,9 @@
 # tim's .Rprofile
 #
 .First <- function() {
+ 
+  # use bspm for faster updates 
+  suppressMessages(bspm::enable())
 
   # since I'm always on Linux this is a gimme
   Sys.setenv("R_PDFVIEWER"="/usr/bin/evince")
@@ -36,14 +39,15 @@
 
     reqInstall("utils")
     reqInstall("BiocManager")
-   
+  
+    # this has been flaky. disabling it.  
     # bridge to system package management
-    library(bspm) # binary packages
-    suppressMessages(bspm::enable())
+    # library(bspm) # binary packages
+    # suppressMessages(bspm::enable())
     # note that this will ask for sudo access in the course of updates
 
     # "Packages I'd rather not work without" (loosely defined)
-    pkgs <- c("tidyverse","knitr","useful","gtools","skeletor","S4Vectors")
+    pkgs <- c("useful","gtools","skeletor","tidyverse")
     BiocManager::install(setdiff(pkgs, unique(rownames(installed.packages()))))
 
     # fix shortcomings
