@@ -19,5 +19,6 @@ getGEOmeta <- function(geo=NULL, verbose=TRUE) {
 getGSEmeta <- function(gse, con) {
   library(dplyr)
   tbl <- tbl(con, "gsm")
-  select(filter(tbl, series_id==gse), c("gsm", "title"))
+  select(filter(tbl, series_id==gse),
+         c("gsm", "title", "source_name_ch1", "characteristics_ch1"))
 }

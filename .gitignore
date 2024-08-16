@@ -12,3 +12,6 @@ inst/doc/*.html
 .*.sw*
 .Rhistory
 inst/doc
+R/AWS.R
+R/github.R
+R/shinyapps.R

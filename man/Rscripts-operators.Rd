@@ -3,21 +3,18 @@
 \name{Rscripts-operators}
 \alias{Rscripts-operators}
 \alias{\%notin\%}
-\alias{setdiff}
 \alias{\%d\%}
-\alias{intersect}
 \alias{\%i\%}
-\alias{union}
 \alias{\%u\%}
 \title{Additional operators which I find useful (especially for chaining)}
 \usage{
 x \%notin\% table
 
-setdiff(x, y, ...)
+x \%d\% y
 
-intersect(x, y, ...)
+x \%i\% y
 
-union(x, y, ...)
+x \%u\% y
 }
 \arguments{
 \item{x}{the left hand side of x (grapes) y}
